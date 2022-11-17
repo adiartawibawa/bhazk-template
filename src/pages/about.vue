@@ -11,8 +11,3 @@
             aliquid assumenda quia? Animi vel quis soluta. Rerum, exercitationem? Perferendis?</p>
     </div>
 </template>
-
-<route lang="yaml">
-meta:
-    layout: default
-</route>
