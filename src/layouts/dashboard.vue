@@ -5,6 +5,8 @@ import { useDark, useToggle } from "@vueuse/core";
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
 
+const [isOpen, toggle] = useToggle();
+
 // export default {
 //   data() {
 //     return {
@@ -172,7 +174,7 @@ const toggleDark = useToggle(isDark);
         </a>
 
         <button
-          @click="isOpen = !isOpen"
+          @click="toggle()"
           class="p-2 text-white rounded-lg focus:outline-none hover:bg-gray-700"
         >
           <svg
