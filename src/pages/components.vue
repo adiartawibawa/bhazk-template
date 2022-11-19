@@ -1,7 +1,12 @@
 <script setup>
+import Button from '@/components/Button.vue';
+import BaseButtons from '@/components/BaseButtons.vue';
+import Icon from '@/components/Icons.vue';
+
 </script>
 
 <template>
+    <!-- Alert -->
     <section class="grid grid-cols-1 gap-8 px-6 xl:grid-cols-3 2xl:grid-cols-4 md:grid-cols-2">
         <div class="flex w-full max-w-sm overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
             <div class="flex items-center justify-center w-12 bg-emerald-500">
@@ -88,7 +93,9 @@
 
 
     </section>
+    <!-- End Alert -->
 
+    <!-- Breadcrumbs -->
     <section class="grid grid-cols-1 gap-8 px-6 xl:grid-cols-3 2xl:grid-cols-4 md:grid-cols-2">
         <div class="flex items-center py-4 overflow-y-auto whitespace-nowrap">
             <a href="#" class="text-gray-600 dark:text-gray-200">
@@ -135,7 +142,9 @@
             </a>
         </div>
     </section>
+    <!-- End Breadcrumbs -->
 
+    <!-- Cards -->
     <section class="grid grid-cols-1 gap-8 px-6 xl:grid-cols-3 2xl:grid-cols-4 md:grid-cols-2">
         <div class="max-w-2xl px-8 py-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
             <div class="flex items-center justify-between">
@@ -292,7 +301,9 @@
             </div>
         </div>
     </section>
+    <!-- End Cards -->
 
+    <!-- Pagination -->
     <section class="grid grid-cols-1 gap-8 px-6 xl:grid-cols-3 2xl:grid-cols-4 md:grid-cols-2">
         <div class="flex">
             <a href="#"
@@ -339,7 +350,9 @@
             </a>
         </div>
     </section>
+    <!-- End Pagination -->
 
+    <!-- Testimoni -->
     <section class="bg-white dark:bg-gray-900">
         <div class="container px-6 py-10 mx-auto">
             <div class="lg:-mx-6 lg:flex lg:items-center">
@@ -386,7 +399,9 @@
             </div>
         </div>
     </section>
+    <!-- End Testimoni -->
 
+    <!-- Testimoni -->
     <section class="bg-white dark:bg-gray-900 pb-20">
         <div class="relative flex">
             <div class="min-h-screen lg:w-1/3"></div>
@@ -441,7 +456,9 @@
             </div>
         </div>
     </section>
+    <!-- End Testimoni -->
 
+    <!-- Testimoni -->
     <section class="bg-white dark:bg-gray-900">
         <div class="container px-6 py-10 mx-auto">
             <h1
@@ -498,6 +515,24 @@
             </div>
         </div>
     </section>
+    <!-- End Testimoni -->
+
+    <!-- Button -->
+    <section class="grid grid-cols-1 gap-8 px-6 xl:grid-cols-3 2xl:grid-cols-4 md:grid-cols-2">
+        <Button href="https://github.com/adiartawibawa/bhazk-template" target="_blank" icon="github"
+            icon-style="w-5 h-5 fill-current" label="Star on GitHub" color="contrast" rounded-full />
+
+        <base-buttons>
+            <Button type="submit" color="info" label="Submit" />
+            <Button type="reset" color="danger" outline label="Reset" />
+        </base-buttons>
+
+        <base-buttons>
+            <Button color="danger" icon="gear" icon-style="w-6 h-6" :small="buttonsSmall" :outline="buttonsOutline"
+                :disabled="buttonsDisabled" :rounded-full="buttonsRounded" />
+        </base-buttons>
+    </section>
+    <!-- End Button -->
 
     <section class="grid grid-cols-1 gap-8 px-6 xl:grid-cols-3 2xl:grid-cols-4 md:grid-cols-2">
 
