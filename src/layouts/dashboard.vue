@@ -1,5 +1,5 @@
 <script setup>
-import Chart from "chart.js/auto";
+
 import { useDark, useToggle } from "@vueuse/core";
 
 const isDark = useDark();
@@ -9,156 +9,13 @@ const [isOpen, toggle] = useToggle();
 
 const [dropdownOpen, dropDown] = useToggle();
 
-// export default {
-//   data() {
-//     return {
-//       isOpen: false,
-//       dropdownOpen: false,
-//     };
-//   },
-//   mounted() {
-//     const charData = {
-//       type: "doughnut",
-//       data: {
-//         labels: ["Red", "Blue", "Yellow", "Green", "Purple"],
-//         datasets: [
-//           {
-//             label: "# of Votes",
-//             data: [20, 20, 20, 10, 10],
-//             backgroundColor: [
-//               "rgba(153, 102, 255)",
-//               "rgba(255, 206, 86)",
-//               "rgba(255, 99, 132)",
-//               "rgba(54, 162, 235)",
-//               "rgba(75, 192, 192)",
-//             ],
-//             borderColor: [
-//               "rgba(153, 102, 255, 1)",
-//               "rgba(255, 206, 86, 1)",
-//               "rgba(255, 99, 132, 1)",
-//               "rgba(54, 162, 235, 1)",
-//               "rgba(75, 192, 192, 1)",
-//             ],
-//           },
-//         ],
-//       },
-//       options: {
-//         plugins: {
-//           legend: {
-//             position: "bottom",
-//             fullSize: false,
-//             align: "start",
-//             labels: {
-//               padding: 10,
-//               usePointStyle: true,
-//               pointSytle: "circle",
-//             },
-//           },
-//         },
-//       },
-//     };
-//     const data = [
-//       { x: "Jan", applied: 19, left: 16 },
-//       { x: "Feb", applied: 15, left: 8 },
-//       { x: "Mar", applied: 24, left: 14 },
-//       { x: "Apr", applied: 8, left: 7 },
-//       { x: "May", applied: 11, left: 7 },
-//       { x: "Jun", applied: 10, left: 6 },
-//       { x: "Jul", applied: 17, left: 15 },
-//       { x: "Aug", applied: 19, left: 18 },
-//       { x: "Sep", applied: 18, left: 12 },
-//       { x: "Oct", applied: 19, left: 20 },
-//       { x: "Nov", applied: 18, left: 8 },
-//       { x: "Dec", applied: 17, left: 12 },
-//     ];
-
-//     const secondcharData = {
-//       type: "bar",
-//       data: {
-//         labels: [
-//           "Jan",
-//           "Feb",
-//           "Mar",
-//           "Apr",
-//           "May",
-//           "Jun",
-//           "Jul",
-//           "Aug",
-//           "Sep",
-//           "Oct",
-//           "Nov",
-//           "Dec",
-//         ],
-//         datasets: [
-//           {
-//             label: "Applied students",
-//             borderRadius: 5,
-//             data: data,
-//             backgroundColor: "#FF7A00",
-//             maxBarThickness: 5,
-//             parsing: {
-//               yAxisKey: "applied",
-//             },
-//           },
-//           {
-//             label: "Left students",
-//             borderRadius: 5,
-//             maxBarThickness: 5,
-//             data: data,
-//             backgroundColor: "#6F52ED",
-//             parsing: {
-//               yAxisKey: "left",
-//             },
-//           },
-//         ],
-//       },
-//       options: {
-//         responsive: true,
-//         scales: {
-//           yAxes: [
-//             {
-//               ticks: {
-//                 beginAtZero: true,
-//               },
-//             },
-//           ],
-//           y: {
-//             beginAtZero: true,
-//             max: 25,
-//           },
-//           x: {
-//             grid: {
-//               display: false,
-//             },
-//           },
-//         },
-//         plugins: {
-//           legend: {
-//             display: false,
-//           },
-//         },
-//       },
-//     };
-//     const ctx = document.getElementById("myChart");
-//     const second = document.getElementById("secondChart");
-//     const myChart = new Chart(ctx, charData);
-//     const secondChart = new Chart(second, secondcharData);
-//     myChart;
-//     secondChart;
-//   },
-// };
 </script>
 
 <template>
   <div class="relative min-h-screen lg:flex">
-    <header class="text-gray-100 bg-gray-800 lg:hidden">
+    <header class="text-gray-100 bg-white dark:bg-dark-primary lg:hidden">
       <div class="container flex items-center justify-between p-4 mx-auto">
-        <a href="#" class="text-white">
-          <!-- <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                    </svg> -->
+        <a href="#" class="text-gray-500">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"
             stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round"
@@ -166,7 +23,7 @@ const [dropdownOpen, dropDown] = useToggle();
           </svg>
         </a>
 
-        <button @click="toggle()" class="p-2 text-white rounded-lg focus:outline-none hover:bg-gray-700">
+        <button @click="toggle()" class="p-2 text-gray-500 rounded-lg focus:outline-none hover:bg-gray-700">
           <svg v-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
             stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
@@ -184,10 +41,10 @@ const [dropdownOpen, dropDown] = useToggle();
       class="fixed inset-0 z-20 transition-opacity bg-black opacity-30 lg:hidden"></div>
 
     <aside id="sidebar" :class="isOpen ? 'translate-x-0 ease-in' : '-translate-x-full ease-out'"
-      class="fixed inset-y-0 left-0 z-30 flex flex-col w-24 min-h-screen space-y-6 overflow-y-auto text-gray-100 transition duration-200 transform bg-gray-800 lg:translate-x-0 lg:relative lg:inset-0">
+      class="fixed inset-y-0 left-0 z-30 flex flex-col w-24 min-h-screen space-y-6 overflow-y-auto text-gray-100 transition duration-200 transform bg-white dark:bg-dark-primary lg:translate-x-0 lg:relative lg:inset-0">
       <div class="flex flex-col items-center flex-1 space-y-6">
         <a href="#"
-          class="flex items-center justify-center w-full h-20 font-bold text-white truncate bg-blue-600 whitespace-nowrap">
+          class="flex items-center justify-center w-full h-20 font-bold text-gray-600 truncate bg-white dark:text-gray-500 dark:bg-dark-secondary border-b dark:border-dark-secondary whitespace-nowrap">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24"
             stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round"
@@ -238,7 +95,7 @@ const [dropdownOpen, dropDown] = useToggle();
         </nav>
       </div>
 
-      <div class="flex justify-center py-5 border-t border-gray-600">
+      <div class="flex justify-center py-5 border-t border-gray-200 dark:border-dark-secondary">
         <a href="#" class="p-3 transition-colors duration-300 rounded-lg group hover:bg-white">
           <svg class="w-6 h-6 opacity-100 group-hover:stroke-blue-700" viewBox="0 0 24 24" fill="none"
             xmlns="http://www.w3.org/2000/svg">
@@ -255,7 +112,8 @@ const [dropdownOpen, dropDown] = useToggle();
     </aside>
 
     <main id="content" class="flex-1 space-y-6 overflow-y-auto bg-gray-100 lg:h-screen md:space-y-8 dark:bg-gray-900">
-      <header class="flex items-center justify-between h-20 px-6 bg-white border-b">
+      <header
+        class="flex items-center justify-between h-20 px-6 border-b bg-white dark:bg-dark-secondary dark:border-dark-secondary">
         <div class="relative flex items-center">
           <span class="absolute inset-y-0 left-0 flex items-center pl-3">
             <svg class="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none">
@@ -266,20 +124,20 @@ const [dropdownOpen, dropDown] = useToggle();
           </span>
 
           <input type="text"
-            class="py-3 pl-10 pr-4 text-gray-700 placeholder-gray-400 bg-white border border-transparent border-gray-200 rounded-lg sm:w-auto w-36 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
+            class="py-3 pl-10 pr-4 text-gray-700 placeholder-gray-400 bg-gray-100 dark:bg-dark-primary border border-transparent border-gray-200 rounded-lg sm:w-auto w-36 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
             placeholder="Search" />
         </div>
 
         <div class="flex items-center">
           <div class="relative">
             <button
-              class="transition-colors duration-300 rounded-lg sm:px-4 sm:py-2 focus:outline-none hover:bg-gray-100"
+              class="transition-colors duration-300 rounded-lg sm:px-4 sm:py-2 focus:outline-none hover:bg-gray-100 dark:hover:bg-dark-primary"
               @click="dropDown()">
               <span class="sr-only">User Menu</span>
               <div class="flex items-center md:-mx-2">
                 <div class="hidden md:mx-2 md:flex md:flex-col md:items-end md:leading-tight">
-                  <span class="font-semibold text-gray-800">Adi Arta Wibawa</span>
-                  <span class="text-sm text-gray-600">Teacher</span>
+                  <span class="font-semibold text-gray-800 dark:text-white">Adi Arta Wibawa</span>
+                  <span class="text-sm text-gray-600 dark:text-gray-500">Teacher</span>
                 </div>
 
                 <img class="flex-shrink-0 w-12 h-12 overflow-hidden bg-gray-100 rounded-full md:mx-2"
@@ -291,10 +149,11 @@ const [dropdownOpen, dropDown] = useToggle();
               enter-from-class="transform scale-95 opacity-0" enter-to-class="transform scale-100 opacity-100"
               leave-active-class="transition duration-75 ease-in" leave-from-class="transform scale-100 opacity-100"
               leave-to-class="transform scale-95 opacity-0">
-              <div class="absolute right-0 z-50 w-56 p-2 bg-white border rounded-lg top-16 lg:top-20"
+              <div
+                class="absolute right-0 z-50 w-56 p-2 bg-white dark:bg-dark-secondary border dark:border-dark-secondary rounded-lg top-16 lg:top-20"
                 v-show="dropdownOpen">
                 <div
-                  class="px-4 py-2 text-gray-800 transition-colors duration-300 rounded-lg cursor-pointer hover:bg-gray-100">
+                  class="px-4 py-2 text-gray-800 dark:text-gray-300 dark:hover:text-white transition-colors duration-300 rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-dark-primary">
                   Profile
                 </div>
                 <div
@@ -312,7 +171,7 @@ const [dropdownOpen, dropDown] = useToggle();
           <div v-show="dropdownOpen" class="fixed inset-0 z-30" @click="dropdownOpen = false"></div>
 
           <button
-            class="relative p-2 mx-3 text-gray-400 transition-colors duration-300 rounded-full hover:bg-gray-100 hover:text-gray-600 focus:bg-gray-100">
+            class="relative p-2 mx-3 text-gray-400 transition-colors duration-300 rounded-full hover:bg-gray-100 hover:text-gray-600 focus:bg-gray-100 dark:hover:bg-dark-primary dark:hover:text-gray-100">
             <span class="sr-only">Notifications</span>
             <span class="absolute top-0 right-0 w-2 h-2 mt-1 mr-2 bg-blue-700 rounded-full"></span>
             <span class="absolute top-0 right-0 w-2 h-2 mt-1 mr-2 bg-blue-700 rounded-full animate-ping"></span>
@@ -325,7 +184,7 @@ const [dropdownOpen, dropDown] = useToggle();
 
           <!-- Dark Button -->
           <button @click="toggleDark()"
-            class="p-2 text-gray-400 transition-colors duration-300 rounded-full focus:outline-none hover:bg-gray-100 hover:text-gray-600 focus:bg-gray-100">
+            class="p-2 text-gray-400 transition-colors duration-300 rounded-full focus:outline-none hover:bg-gray-100 hover:text-gray-600 focus:bg-gray-100 dark:hover:bg-dark-primary dark:hover:text-gray-100">
             <span v-if="isDark">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-6 h-6">
@@ -345,7 +204,7 @@ const [dropdownOpen, dropDown] = useToggle();
           <!-- End Dark Button -->
 
           <button
-            class="p-2 text-gray-400 transition-colors duration-300 rounded-full focus:outline-none hover:bg-gray-100 hover:text-gray-600 focus:bg-gray-100">
+            class="p-2 text-gray-400 transition-colors duration-300 rounded-full focus:outline-none hover:bg-gray-100 hover:text-gray-600 focus:bg-gray-100 dark:hover:bg-dark-primary dark:hover:text-gray-100">
             <span class="sr-only">Log out</span>
 
             <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
